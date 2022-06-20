@@ -1,5 +1,5 @@
 import { Providers, ProviderState } from '@microsoft/mgt-element';
-import { Agenda, Login, Person } from '@microsoft/mgt-react';
+import { Agenda, Login, People, PeoplePicker, Person, PersonCard } from '@microsoft/mgt-react';
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
@@ -33,8 +33,13 @@ function App() {
       </header>
       <div>
         {isSignedIn &&
+          <PersonCard personQuery='me' showPresence  />}
+      </div>
+      <div>
+        {isSignedIn &&
           <Agenda preferredTimezone='' />}
       </div>
+      
     </div>
   );
 }
