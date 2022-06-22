@@ -20,6 +20,10 @@ function useIsSignedIn() {
     }
   }, []);
 
+  useEffect(() => {
+    document.title = "Micrsoft Graph API"
+  }, [])
+
   return [isSignedIn];
 }
 
